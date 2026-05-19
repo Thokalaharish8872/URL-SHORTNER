@@ -1,5 +1,0 @@
-Since the database constraints are behaving correctly, the issue doesn’t appear to be at the schema level. The fix should focus on how the application handles constraint conflicts rather than modifying the database itself.
-
-Specifically, we should improve the application logic to properly handle cases like duplicate short code generation (e.g., retrying on collision) and define clear behavior for duplicate long URLs (either reuse existing mappings or allow new ones consistently). Additionally, ensuring atomic operations instead of a “check-then-insert” flow will help avoid race conditions in concurrent scenarios.
-
-So overall, the data model is sound, but the application layer needs to be made more resilient and deterministic in handling these edge cases.

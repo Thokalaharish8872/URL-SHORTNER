@@ -1,2 +1,0 @@
-{"timestamp_unix_ms":1778238497807,"level":"error","message":"command.failed","context":{"command":"report"}}
-Error: Each report event must include event_type. Allowed values: pretest, decision, hint_used, interlude_response, verify_assessment, decide_assessment, bug_finding, fix_quality, module_complete, checkpoint_demo, constraints_twist, coaching_update, module_evaluation, completion

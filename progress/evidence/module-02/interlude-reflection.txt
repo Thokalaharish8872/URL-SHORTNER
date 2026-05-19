@@ -1,5 +1,0 @@
-In most real-world cases, I’d attribute those inconsistencies more to failures in the application layer rather than the database itself. Modern relational databases like Postgres are very reliable in enforcing constraints and maintaining data integrity at the storage level.
-
-Issues like a deleted item reappearing or an incorrect balance usually point to problems such as stale reads, improper transaction handling, race conditions, or eventual consistency trade-offs in the application logic. For example, a “check-then-update” pattern or missing transaction boundaries can easily lead to inconsistent states under concurrent usage.
-
-So my takeaway is that while the database guarantees correctness at a low level, maintaining consistency from the user’s perspective depends heavily on how the application manages concurrency, caching, and state synchronization.

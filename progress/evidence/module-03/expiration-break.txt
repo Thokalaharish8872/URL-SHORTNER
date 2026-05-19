@@ -1,5 +1,0 @@
-Testing behavior of expired links...
-Creating link that expired at: 2026-04-29T18:10:29.726998Z
-Attempting to redirect to expired code: JBv1st
-Status Code: 307
-ALERT: Expired link still redirects! This might be our bug.

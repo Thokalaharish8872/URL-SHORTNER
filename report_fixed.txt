@@ -1,5 +1,0 @@
-{"timestamp_unix_ms":1778238587933,"level":"error","message":"command.failed","context":{"code":"INVALID_REQUEST_BODY","command":"report","correlation_id":"upsk-corr-19e074777bb-1","error_id":"err_7ad1bf7ad49a4e5190a7e72d","request_id":"2faef7f0-8b88-40a0-bf6b-a5284008a5f2","status":400}}
-Error: Invalid request body at events.0.module: Invalid input: expected number, received string Run: upsk feedback --type error --from-last-error --summary 'Invalid request body at events.0.module: Invalid input: expected number, received string' [trace: correlation_id=upsk-corr-19e074777bb-1, request_id=2faef7f0-8b88-40a0-bf6b-a5284008a5f2, error_id=err_7ad1bf7ad49a4e5190a7e72d]
-
-Caused by:
-    Request failed (400): Invalid request body at events.0.module: Invalid input: expected number, received string
