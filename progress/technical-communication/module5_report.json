@@ -1,0 +1,95 @@
+{
+  "nonce": "module5_reflect",
+  "events": [
+    {
+      "module": 5,
+      "step": "reflect",
+      "event_type": "module_evaluation",
+      "data": {
+        "narrative": "Completed Module 5 'Stakeholder Communication' learning about communication medium tradeoffs, translating technical details to business impact, writing stakeholder memo for security delay, identifying 31 jargon terms in flawed email and buried Black Friday risk, and rewriting email to stakeholder-friendly version with clear asks.",
+        "overall": 4,
+        "dimension_scores": [
+          {
+            "key": "review_quality",
+            "score": 4,
+            "observation": "Identified 31 jargon terms in Marcus's email and found the buried Black Friday risk that was hidden in technical language",
+            "evidence": "flawed_email_analysis.md contains detailed jargon count and risk identification"
+          },
+          {
+            "key": "writing_clarity",
+            "score": 4,
+            "observation": "Wrote stakeholder memo opening with business impact (3-week delay) not technical details, translated all technical terms to plain language",
+            "evidence": "security_delay_memo.md opens with business impact and uses coat check analogy for tokenization"
+          },
+          {
+            "key": "audience_awareness",
+            "score": 4,
+            "observation": "Rewrote infrastructure migration email for VP of Engineering and Head of Product, translating 31 technical terms to business language and ending with specific asks",
+            "evidence": "infrastructure_migration_fixed.md replaces Kong/NGINX with traffic routing system, ends with 3 clear asks"
+          },
+          {
+            "key": "structure_quality",
+            "score": 4,
+            "observation": "Chose written memo format for scalability and referenceability, structured emails with clear sections (summary, what happened, what we're doing, risks, what we need)",
+            "evidence": "Both memos use logical structure with headings and bullet points"
+          },
+          {
+            "key": "actionability",
+            "score": 4,
+            "observation": "Both stakeholder communications end with specific asks - security memo asks for approval of date shift and Thursday meeting, infrastructure memo asks for 2 engineers for 8 weeks, roadmap alignment, and load test timing",
+            "evidence": "Both documents have clear calls to action with specific decisions requested"
+          }
+        ],
+        "strengths": [
+          "Chose written memo format with reasoning about scalability and referenceability",
+          "Wrote stakeholder communications opening with business impact not technical details",
+          "Identified all jargon in flawed email (31 terms) and buried Black Friday risk",
+          "Rewrote flawed email to stakeholder-friendly version with clear asks"
+        ],
+        "growth_areas": [],
+        "recommendation": "Continue practicing stakeholder communication in real-world scenarios - the muscle of leading with impact, translating everything, and ending with what you need applies to any difficult conversation with non-technical stakeholders",
+        "public_evidence": [
+          {
+            "artifact": "Security delay stakeholder memo",
+            "student_action": "Wrote stakeholder communication for VP of Product and Head of Marketing about delaying subscription launch due to security vulnerability",
+            "technical_detail": "Memo opens with business impact (3-week delay), uses coat check analogy for tokenization, includes visceral analogy (back door doesn't lock), ends with clear ask for approval and meeting",
+            "proof": "progress/technical-communication/security_delay_memo.md",
+            "ability": "Stakeholder communication and technical translation",
+            "reviewer_value": "Demonstrates ability to communicate security decisions to business stakeholders in a way that drives action while maintaining trust",
+            "confidence": "demonstrated"
+          },
+          {
+            "artifact": "Infrastructure migration stakeholder email",
+            "student_action": "Rewrote flawed technical email to stakeholder-friendly version translating 31 jargon terms and surfacing buried Black Friday risk",
+            "technical_detail": "Rewrite opens with Black Friday business impact, replaces Kong/NGINX with traffic routing system, surfaces server resource risk clearly, ends with 3 specific asks",
+            "proof": "progress/technical-communication/infrastructure_migration_fixed.md",
+            "ability": "Technical translation and stakeholder advocacy",
+            "reviewer_value": "Shows ability to transform technical proposals into business cases that non-technical leaders can understand and act on",
+            "confidence": "demonstrated"
+          }
+        ],
+        "student_knowledge": {
+          "terminology_gaps": [],
+          "concepts_demonstrated": [
+            {
+              "concept": "Business impact-first communication",
+              "evidence": "Opened both stakeholder communications with business impact (launch delay, Black Friday revenue loss) not technical details"
+            },
+            {
+              "concept": "Technical translation",
+              "evidence": "Translated 31 jargon terms in infrastructure email to plain language (traffic routing system, server resources)"
+            },
+            {
+              "concept": "Clear asks in stakeholder communication",
+              "evidence": "Both communications end with specific decisions requested (approval for date shift, 2 engineers for 8 weeks, load test timing)"
+            }
+          ],
+          "teaching_approaches": [],
+          "effective_level": "intermediate",
+          "learning_style_signals": ["prefers practical examples with clear criteria"],
+          "confidence_level": "medium"
+        }
+      }
+    }
+  ]
+}

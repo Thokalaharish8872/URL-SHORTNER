@@ -1,0 +1,19 @@
+BUG 1: Authentication Bypass
+File: api/app/main.py
+Endpoint: GET /links
+Description: Missing get_current_user dependency. Anyone can list all links.
+
+BUG 2: Information Leakage
+File: api/app/main.py
+Component: catch_exceptions_middleware
+Description: Stack traces are leaked in the 500 error response.
+
+BUG 3: Functional Break
+File: api/app/services.py
+Method: LinkService.log_click
+Description: Hardcoded RuntimeError prevents redirects from working.
+
+BUG 4: Placeholder Error ID
+File: api/app/main.py
+Component: catch_exceptions_middleware
+Description: request_id is hardcoded to "TODO".

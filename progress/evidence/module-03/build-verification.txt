@@ -1,0 +1,11 @@
+Creating link...
+Status: 200
+Response: {'long_url': 'https://www.google.com/', 'expires_at': None, 'tags': ['search', 'test'], 'id': 6, 'code': 'Q33Ejf', 'created_at': '2026-04-29T18:44:21.629593Z', 'created_by': 'demo-user'}
+
+Listing links...
+Status: 200
+Total links: 5
+
+Testing redirect for code: Q33Ejf
+Status: 307
+Location: https://www.google.com/

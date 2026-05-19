@@ -1,0 +1,5 @@
+Yes, this separation of concerns definitely increases confidence in the system’s resilience.
+
+Pydantic ensures that all incoming data is structurally valid before it reaches the business logic, which reduces the risk of invalid inputs propagating through the system. The service layer then acts as a single source of truth for enforcing business rules like expiration, ensuring consistent behavior across all endpoints.
+
+This becomes even more valuable as we add features like authentication, where rules around ownership, access control, and permissions need to be applied consistently. Having a centralized service layer makes the system easier to extend, reason about, and maintain without introducing subtle bugs or inconsistencies.

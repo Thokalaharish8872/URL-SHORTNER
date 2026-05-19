@@ -1,0 +1,6 @@
+python311.zip
+.
+..\api
+
+# Uncomment to run site.main() automatically
+import site

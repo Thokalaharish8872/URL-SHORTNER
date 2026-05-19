@@ -1,0 +1,8 @@
+Testing Conflict Handling...
+Duplicate Insert Status: 400
+SUCCESS: Duplicate custom code blocked with 400
+
+Testing Analytics Logging...
+Clicks before redirect: 2
+Clicks after redirect: 3
+SUCCESS: ClickEvent successfully logged in database

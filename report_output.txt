@@ -1,0 +1,13 @@
+﻿./.bin/upsk.exe : error: unexpected argument '--module' found
+At line:1 char:65
++ ... ssessment"; ./.bin/upsk.exe report --module 1 --file progress/technic ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (error: unexpect...--module' found:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+  tip: to pass '--module' as a value, use '-- --module'
+
+Usage: upsk.exe report [OPTIONS] [JSON]
+
+For more information, try '--help'.

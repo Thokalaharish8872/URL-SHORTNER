@@ -1,0 +1,20 @@
+Timestamp: 2026-05-08T16:34:40.873191
+Read report JSON successfully
+JSON length: 2607 chars
+Has events: True
+
+=== Step 1: upsk report ===
+Return code: 1
+STDOUT: 
+STDERR: {"timestamp_unix_ms":1778238282263,"level":"error","message":"command.failed","context":{"command":"report"}}
+Error: Each report event must include event_type. Allowed values: pretest, decision, hint_used, interlude_response, verify_assessment, decide_assessment, bug_finding, fix_quality, module_complete, checkpoint_demo, constraints_twist, coaching_update, module_evaluation, completion
+
+
+=== Step 2: upsk next ===
+Return code: 1
+STDOUT: 
+STDERR: {"timestamp_unix_ms":1778238292453,"level":"error","message":"command.failed","context":{"code":"SESSION_REFLECT_REPORT_REQUIRED","command":"next","correlation_id":"upsk-corr-19e0742e61e-1","error_id":"err_f6333c302a3c4fdf95d48711","request_id":"2331d2e6-2598-4fc5-ab5c-d31851cfd10b","status":409}}
+Error: Submit the REFLECT evaluation before continuing to the next step. Run: upsk report '<json>' [trace: correlation_id=upsk-corr-19e0742e61e-1, request_id=2331d2e6-2598-4fc5-ab5c-d31851cfd10b, error_id=err_f6333c302a3c4fdf95d48711]
+
+Caused by:
+    Request failed (409): Submit the REFLECT evaluation before continuing to the next step.

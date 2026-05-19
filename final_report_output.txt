@@ -1,0 +1,130 @@
+Return code: 0
+STDOUT:
+{
+  "session_id": null,
+  "skill": {
+    "id": "sk_ac9e6eb26b4002765915",
+    "slug": "technical-communication",
+    "name": "Technical Communication",
+    "version": "1.0.0"
+  },
+  "pack": {
+    "id": "spk_technical_communication_launchpad",
+    "slug": "launchpad",
+    "name": "Launchpad",
+    "order": 1,
+    "access_state": "unlocked"
+  },
+  "module": {
+    "number": 1,
+    "label": "MODULE 01"
+  },
+  "step": {
+    "id": "reflect",
+    "label": "REFLECT"
+  },
+  "content": "Report submitted. Events inserted: 1",
+  "achievements": [
+    "report_submitted",
+    "events_inserted:1"
+  ],
+  "prompt_suggestions": [
+    {
+      "id": "next",
+      "label": "Continue",
+      "command": "upsk next --summary \"<what you completed>\" --evidence \"<concrete evidence>\"",
+      "reason": "Continue to the next guided step.",
+      "priority": 1
+    },
+    {
+      "id": "status",
+      "label": "View Status",
+      "command": "upsk status",
+      "reason": "Review your updated session state.",
+      "priority": 2
+    },
+    {
+      "id": "sync",
+      "label": "Sync Session",
+      "command": "upsk sync",
+      "reason": "Sync local state if progress looks stale.",
+      "priority": 3
+    }
+  ],
+  "data": {
+    "ok": true,
+    "inserted": 1,
+    "timer_elapsed_seconds": null,
+    "timer_attached_events": 0,
+    "achievements": [],
+    "newly_earned_achievements": [],
+    "latest_report_module": 1,
+    "latest_report_score_out_of_10": 8.0,
+    "access_changes": {
+      "has_any_change": false,
+      "skills": []
+    },
+    "payload": {
+      "events": [
+        {
+          "data": {
+            "dimension_scores": [
+              {
+                "evidence": "code_review.md flagged the bug as Critical priority",
+                "key": "merge_test",
+                "observation": "Caught the critical division-by-zero bug and identified all crash paths",
+                "score": 4
+              },
+              {
+                "evidence": "code_review.md includes Suggested fix for each issue",
+                "key": "actionability",
+                "observation": "Provided concrete code snippets for every fix",
+                "score": 4
+              },
+              {
+                "evidence": "code_review.md opens with positive notes and uses helpful language",
+                "key": "motivation",
+                "observation": "Maintained collaborative tone with positive feedback",
+                "score": 4
+              },
+              {
+                "evidence": "code_review.md uses Critical/High/Medium labels and places bug first",
+                "key": "priority_signaling",
+                "observation": "Used clear severity indicators and placed critical issue first",
+                "score": 4
+              }
+            ],
+            "growth_areas": [
+              "Could have suggested unit test cases for the edge cases identified",
+              "Might benefit from linking to team style guide for naming conventions"
+            ],
+            "narrative": "Completed Module 1 'Code Review as Communication'. Wrote a summary-style code review that caught the critical division-by-zero bug, provided concrete fixes, and maintained a motivating tone. Self-assessed against merge test, actionability, motivation, and priority signaling criteria. Chose summary review over inline for this scenario to prioritize the most critical issues first and provide architectural context.",
+            "overall": 4,
+            "recommendation": "Continue practicing summary review format for multi-file PRs and add testing suggestions for critical bugs",
+            "strengths": [
+              "Flagged the critical division-by-zero bug as the top priority issue",
+              "Provided concrete code snippets for every fix",
+              "Maintained a motivating tone with positive feedback",
+              "Used clear severity indicators (Critical/High/Medium)"
+            ],
+            "student_knowledge": {
+              "concepts_demonstrated": [],
+              "confidence_level": "medium",
+              "effective_level": "intermediate",
+              "learning_style_signals": [],
+              "teaching_approaches": [],
+              "terminology_gaps": []
+            }
+          },
+          "event_type": "module_evaluation",
+          "module": 1,
+          "step": "reflect"
+        }
+      ],
+      "nonce": "vqgNUacvAPyGVPJ7_omPD"
+    }
+  }
+}
+
+STDERR:
+

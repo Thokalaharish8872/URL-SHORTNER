@@ -1,0 +1,19 @@
+REFLECTION ANSWERS - MODULE 5
+
+1. Why is leaking stack traces risky?
+Leaking stack traces is risky because it exposes internal implementation details to potential attackers. This includes file paths, function names, library versions, and internal code structure. This information can be used to identify vulnerabilities, craft targeted exploits, and understand the internal architecture of the system, making it easier to compromise.
+
+2. What is the difference between logs for debugging vs logs for auditing?
+- Debugging Logs: Intended for developers to diagnose and fix technical issues. They are verbose, contain internal state (like stack traces), and are often ephemeral.
+- Auditing Logs: Intended for security and compliance. They track "who did what and when" for accountability and forensics. They must be immutable, high-integrity, and focus on security-relevant events (e.g., login, data access, config changes).
+
+3. What fields are essential for incident debugging?
+- timestamp (ISO 8601)
+- request_id / correlation_id (to link logs across services)
+- severity / level (ERROR, INFO, etc.)
+- message (human-readable error)
+- user_id (who was affected)
+- ip_address (source of request)
+- error_code (machine-readable ID)
+- stack_trace (for server-side diagnosis only)
+- context/metadata (e.g., endpoint hit, resource ID)

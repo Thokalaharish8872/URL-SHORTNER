@@ -1,0 +1,5 @@
+Testing behavior of expired links...
+Creating link that expired at: 2026-04-29T18:13:20.388389Z
+Attempting to redirect to expired code: 8q1mha
+Status Code: 410
+SUCCESS: Expired link correctly returns 410

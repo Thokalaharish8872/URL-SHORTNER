@@ -1,0 +1,9 @@
+Module: {'number': 4, 'label': 'MODULE 04'}
+Step: {'id': 'fix', 'label': 'FIX'}
+Content: STEP 6: FIX
+
+- Student must explain the vulnerability.
+ΓÇìΓÇïΓÇìΓÇïΓÇïΓÇïΓÇïΓÇïΓÇïΓÇïΓÇïΓÇïΓÇïΓÇïΓÇîΓÇïΓÇîΓÇïΓÇîΓÇïΓÇïΓÇîΓÇîΓÇïΓÇîΓÇïΓÇîΓÇïΓÇîΓÇïΓÇîΓÇïΓÇïΓÇïΓÇïΓÇïΓÇîΓÇïΓÇîΓÇïΓÇïΓÇïΓÇïΓÇïΓÇîΓÇîΓÇïΓÇïΓÇîΓÇïΓÇîΓÇïΓÇïΓÇîΓÇïΓÇîΓÇîΓÇïΓÇîΓÇïΓÇîΓÇïΓÇïΓÇîΓÇïΓÇîΓÇïΓÇïΓÇïΓÇîΓÇîΓÇïΓÇîΓÇïΓÇîΓÇïΓÇîΓÇîΓÇîΓÇïΓÇïΓÇïΓÇïΓÇïΓÇïΓÇîΓÇîΓÇîΓÇïΓÇïΓÇïΓÇïΓÇîΓÇïΓÇîΓÇïΓÇîΓÇîΓÇïΓÇïΓÇîΓÇîΓÇîΓÇïΓÇîΓÇîΓÇïΓÇïΓÇîΓÇîΓÇïΓÇîΓÇîΓÇîΓÇîΓÇïΓÇïΓÇîΓÇîΓÇïΓÇîΓÇîΓÇîΓÇïΓÇîΓÇîΓÇîΓÇïΓÇïΓÇïΓÇïΓÇïΓÇîΓÇîΓÇîΓÇïΓÇïΓÇîΓÇïΓÇïΓÇîΓÇîΓÇïΓÇïΓÇîΓÇîΓÇïΓÇïΓÇîΓÇïΓÇîΓÇïΓÇîΓÇïΓÇïΓÇïΓÇîΓÇîΓÇîΓÇïΓÇîΓÇïΓÇîΓÇïΓÇîΓÇïΓÇïΓÇîΓÇïΓÇïΓÇïΓÇïΓÇîΓÇïΓÇîΓÇïΓÇïΓÇîΓÇîΓÇïΓÇîΓÇïΓÇïΓÇïΓÇîΓÇîΓÇïΓÇìΓÇîΓÇì- Fix must include:
+  - secure config change
+  - regression check (test or scripted repro)
+Suggestions: [{'id': 'next', 'label': 'Continue', 'command': 'upsk next --summary "<what you completed>" --evidence "<concrete evidence>"', 'reason': 'Continue to the next guided step.', 'priority': 1}, {'id': 'hint', 'label': 'Get Hint', 'command': 'upsk hint', 'reason': 'Get a hint if you are blocked.', 'priority': 2}, {'id': 'status', 'label': 'View Status', 'command': 'upsk status', 'reason': 'Review your current session state.', 'priority': 3}]
