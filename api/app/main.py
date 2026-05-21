@@ -134,11 +134,12 @@ def redirect_to_link(code: str, request: Request, db: Session = Depends(get_db))
     
     # Log the click asynchronously (simple hash for IP for privacy)
     ip_hash = hash(request.client.host) if request.client else "unknown"
-    LinkService.log_click_async(
-        link_id=link.id, 
-        ip_hash=str(ip_hash),
-        user_agent=request.headers.get("user-agent"),
-        referrer=request.headers.get("referer")
-    )
+    LinkService.log_click_sync(
+    db=db,
+    link_id=link.id,
+    ip_hash=str(ip_hash),
+    user_agent=request.headers.get("user-agent"),
+    referrer=request.headers.get("referer")
+)
     
     return RedirectResponse(url=link.long_url)
