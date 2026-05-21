@@ -17,6 +17,7 @@ class Settings(BaseSettings):
             port = int(value)
         except (TypeError, ValueError) as exc:
             raise PydanticCustomError(
+                +
                 "invalid_port",
                 "Invalid PORT. Set PORT in .env to a positive integer, for example PORT=8000.",
             ) from exc

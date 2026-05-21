@@ -45,6 +45,7 @@ async def catch_exceptions_middleware(request: Request, call_next):
 def health_check():
     return {"status": "ok"}
 
+
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
 
 def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)):
@@ -59,6 +60,7 @@ def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(
 
 @app.post("/register", response_model=UserRead)
 def register(user_in: UserCreate, db: Session = Depends(get_db)):
+    
     try:
         if db is None:
             raise HTTPException(status_code=503, detail="Database unavailable")
@@ -74,7 +76,7 @@ def login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depend
     if not user:
         raise HTTPException(status_code=401, detail="Incorrect email or password")
     
-    access_token = AuthService.create_access_token(db, data={"sub": user.id})
+    access_token = AuthService.create_access_token(db, data={"sub": str(user.id)})
     return {"access_token": access_token, "token_type": "bearer"}
 
 @app.post("/logout")
@@ -86,6 +88,7 @@ def logout(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)):
 
 @app.post("/links", response_model=LinkRead)
 def create_link(link_in: LinkCreate, db: Session = Depends(get_db), current_user_id: int = Depends(get_current_user)):
+    print(f"Creating link for user_id: {current_user_id} with data: {link_in}")
     try:
         if db is None:
             raise HTTPException(status_code=503, detail="Database unavailable")

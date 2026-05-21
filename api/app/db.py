@@ -14,17 +14,9 @@ Base = declarative_base()
 
 
 def get_db() -> Generator[Session, None, None]:
+    db = SessionLocal()
     try:
-        db = SessionLocal()
-        # Test connection
         db.execute(text("SELECT 1"))
         yield db
-    except Exception as e:
-        # Return None if database is not available
-        yield None
     finally:
-        try:
-            if 'db' in locals() and db:
-                db.close()
-        except:
-            pass
+        db.close()

@@ -13,6 +13,8 @@ from app.schemas import LinkCreate, UserCreate
 from sqlalchemy.exc import IntegrityError
 from jose import jwt, JWTError
 
+from sqlalchemy import or_
+
 
 # Auth Configuration
 SECRET_KEY = os.getenv("SECRET_KEY", "fallback-secret-for-dev-only")
@@ -75,16 +77,18 @@ class AuthService:
 
     @staticmethod
     def validate_session(db: Session, token: str) -> Optional[int]:
-        """Validate token against DB for stateful auth."""
-        session = db.execute(select(SessionToken).where(SessionToken.token == token)).scalar_one_or_none()
+        session = db.execute(
+            select(SessionToken).where(SessionToken.token == token)
+        ).scalar_one_or_none()
+
         if not session:
             return None
-        
+
         if session.expires_at < datetime.utcnow():
             db.delete(session)
             db.commit()
             return None
-            
+
         try:
             payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
             return payload.get("sub")
@@ -247,6 +251,7 @@ class LinkService:
         Searches in code, long_url, and tags using search_vector column.
         """
         from sqlalchemy import text
+
         
         # Use the precomputed search_vector column with GIN index for fast search
         search_query = text("""
@@ -261,16 +266,24 @@ class LinkService:
         """.format(
             creator_filter="AND created_by = :creator" if creator else ""
         ))
-        
+
         params = {"query": query_text, "skip": skip, "limit": limit}
         if creator:
             params["creator"] = creator
             
         result = db.execute(search_query, params)
+
+        rows = result.fetchall()
+
+        
+        if not rows:
+            raise Exception("No search results found")
         return [Link(**row._mapping) for row in result]
 
     @staticmethod
     def search_links_simple(db: Session, query_text: str, creator: Optional[str] = None, skip: int = 0, limit: int = 100) -> List[Link]:
+        print("came here 1")
+
         """
         Simple case-insensitive search using ILIKE.
         Fallback when FTS is not available.
@@ -282,7 +295,9 @@ class LinkService:
                 Link.long_url.ilike(search_pattern),
             )
         )
+        print("came here 2")
+
         if creator:
             query = query.where(Link.created_by == creator)
-        
+        print("came here ")
         return list(db.execute(query.offset(skip).limit(limit)).scalars().all())
